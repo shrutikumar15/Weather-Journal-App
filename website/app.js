@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', (evt) => {
                 user_response: content
             }
             postData('http://localhost:8000/all', postDataObject).then((data) => {
-                getData('http://localhost:8000/all').then((data) => {
-                    console.log(data);
-                    const mostRecentEntry = data['data'];
+                getData('http://localhost:8000/all').then((res) => {
+                    console.log(res);
+                    const mostRecentEntry = res.data;
                     console.log(mostRecentEntry);
                     // Dynamically Update UI
                     document.getElementById('date').innerHTML = `Date: ${mostRecentEntry.date}`;
