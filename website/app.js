@@ -54,7 +54,6 @@ const getData = async (url = '') => {
     }
 }
 document.addEventListener('DOMContentLoaded', (evt) => {
-    console.log('DOM is fully loaded.');
     const generateButton = document.getElementById('generate');
     generateButton.addEventListener('click', (evt) => {
         event.preventDefault();
